@@ -29,7 +29,7 @@ export default async function page({ params }) {
         </div>
     }
     
-    const readmode = project.Team.memberShip[0].role === "reader"
+    const readmode = project?.Team?.memberShip[0]?.role === "reader"
 
     return (
         <Editor project={project} id={params.projectId} readmode={readmode}/>

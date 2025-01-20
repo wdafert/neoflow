@@ -9,7 +9,7 @@ import { useEffect, useLayoutEffect, useState } from "react"
 import { Mermaid } from './Mermaid/Mermaid'
 import Code from "./Mermaid/Code"
 import Loading from "@/app/app/[projectId]/loading"
-// import mermaid from "mermaid";
+import mermaid from "mermaid";
 import { toast } from "sonner"
 import Link from "next/link"
 
@@ -66,14 +66,14 @@ export default function Editor({ id, project, readmode }) {
     }, [store])
 
 
-    // useEffect(() => {
-    //     mermaid.initialize({
-    //         theme: "dark"
-    //     });
-    // }, [])
+    useEffect(() => {
+        mermaid.initialize({
+            theme: "dark"
+        });
+    }, [])
 
     if (typeof window === "undefined") {
-        return <>Lox</>
+        return  <Loading />
     }
 
 

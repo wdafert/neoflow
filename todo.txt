@@ -1,6 +1,3 @@
-UML images
-main page logic
-
 landing page
 create dev.to blog post
 create video 

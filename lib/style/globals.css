@@ -66,7 +66,7 @@ body {
     --color-warning-dark: #ff0000 !important
   }
 }
-
+ 
 
 .Modal__content {
   @apply !border-input !bg-background

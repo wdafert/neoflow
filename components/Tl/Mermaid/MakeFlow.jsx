@@ -139,7 +139,7 @@ export default function MakeFlow({ editor, setOpenCode }) {
                         {select === -1 ? <div className="flex items-center justify-center flex-col gap-2 mt-5  w-full">
                             <div className="grid grid-cols-3 gap-2 w-full">
                                 {chartStates.map((v, i) => (
-                                    <div onClick={() => setSelect(i)} key={v.type} className="font-bold  text-foreground p-3 border backdrop-blur-lg bg-secondary/20 border-input rounded hover:border-primary flex flex-col items-center justify-end gap-1 hover:shadow-[0_0_10px] hover:shadow-primary ease-in-out duration-200 cursor-pointer h-40 overflow-hidden">
+                                    <div onClick={() => setSelect(i)} key={v.type} className="font-bold  text-foreground p-3 border backdrop-blur-lg  border-input rounded hover:border-primary flex flex-col items-center justify-end gap-1 hover:shadow-[0_0_10px] hover:shadow-primary ease-in-out duration-200 cursor-pointer h-max !bg-primary/10 overflow-hidden ">
                                         {v.name}
                                     </div>
                                 ))}

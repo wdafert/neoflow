@@ -51,7 +51,7 @@ export class Mermaid extends ShapeUtil {
 
         return (
             <HTMLContainer id={shape.id} >
-                <MermaidRender key={shape.id} chart={this.editor.getShape(shape.id).props.text}/>
+                <MermaidRender key={shape.id} id={shape.id} chart={this.editor.getShape(shape.id).props.text}/>
             </HTMLContainer>
         );
     }
