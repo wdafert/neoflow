@@ -1,6 +1,7 @@
 # Neoflow
 ![Hero Screenshot](public/landing.webp)
 
+
 Neoflow is an open-source whiteboard application designed for seamless collaboration and creativity. It combines simplicity with advanced features, making it perfect for teams, designers, and creative minds.
 ---
 ## Features
