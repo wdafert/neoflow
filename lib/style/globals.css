@@ -1,0 +1,444 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Nunito" !important;
+}
+
+.bg-gradient {
+  background: hsl(var(--primaryBase))
+}
+
+:root {
+  --primaryBase: 203 100% 50%;
+  --backgroundBase: 203 65% 4%;
+  --foregroundBase: 184 10% 96.75%;
+}
+
+
+@layer base {
+  :root {
+    --gradient: var(--gradientBase);
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary:var(--primaryBase);
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark { 
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    --gradient: var(--gradientBase);
+    --background: var(--backgroundBase);
+    --foreground: var(--foregroundBase);
+    --muted: 184 50% 10.5%;
+    --muted-foreground: 184 10% 53.5%;
+    --popover: 184 45% 4.55%;
+    --popover-foreground: var(--foregroundBase);
+    --card: 184 45% 4.55%;
+    --card-foreground: var(--foregroundBase);
+    --border: 184 50% 10.5%;
+    --input: 184 50% 10.5%;
+    --primary-foreground: var(--foregroundBase);
+    --secondary: 184 50% 10.5%;
+    --secondary-foreground: var(--foregroundBase);
+    --accent: 184 50% 10.5%;
+    --accent-foreground: var(--foregroundBase);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--foregroundBase);
+    --color-warning-dark: #ff0000 !important
+  }
+}
+
+
+.Modal__content {
+  @apply !border-input !bg-background
+}
+
+.excalidraw .Island {
+  @apply !bg-primary/5 !text-foreground/50
+}
+
+.HelpDialog__key {
+  @apply !bg-background !text-foreground/30
+}
+
+.excalidraw .HelpDialog__island-content {
+  @apply !border-input
+}
+
+.excalidraw .HelpDialog__shortcut {
+  @apply !border-b-input
+}
+
+.excalidraw .Modal__background {
+  @apply !backdrop-blur-sm
+}
+
+.excalidraw .HelpDialog__btn {
+  @apply !bg-background !border-input !text-foreground/60
+}
+
+.excalidraw .Dialog__title {
+  @apply !border-b-input
+}
+
+.excalidraw .Card .Card-icon, .excalidraw .Card .Card-button.ToolIcon_type_button {
+  @apply !bg-background !text-foreground/50 !border-input
+}
+
+.excalidraw .OverwriteConfirm__Actions__Action h4, .excalidraw .OverwriteConfirm h3 {
+  @apply !text-foreground
+}
+
+.excalidraw .ExcButton--color-primary.ExcButton--variant-filled, .excalidraw .RadioGroup__choice.active, .excalidraw .Switch.toggled, .excalidraw .ExcButton--color-muted.ExcButton--variant-outlined, .excalidraw .ExcButton--color-warning.ExcButton--variant-filled, .excalidraw .OverwriteConfirm__Description.OverwriteConfirm__Description--color-warning .OverwriteConfirm__Description__icon {
+  --back-color: none !important;
+  @apply !border-input !bg-background !text-foreground/60
+}
+
+.excalidraw .OverwriteConfirm__Description.OverwriteConfirm__Description--color-warning .OverwriteConfirm__Description__icon svg {
+  color: var(--foregroundBase) !important;
+}
+
+.excalidraw .OverwriteConfirm__Description.OverwriteConfirm__Description--color-warning {
+  @apply !bg-background !text-foreground
+}
+
+.excalidraw .context-menu {
+  @apply !bg-background !border-input
+}
+
+.excalidraw .context-menu button {
+  @apply !text-foreground/60
+}
+
+.excalidraw .context-menu-item-separator {
+  @apply !border-t-input
+}
+
+.excalidraw .Toast {
+  @apply !bg-primary/5 border-input
+}
+
+.excalidraw .Toast .Toast__message {
+  @apply !text-foreground/50
+}
+
+.excalidraw .Dialog__close {}
+
+.layer-ui__wrapper {
+  display: none !important;
+}
+
+.App-bottom-bar {
+  display: none !important;
+}
+
+.App-top-bar {
+  display: none !important;
+}
+
+.excalidraw__canvas {}
+
+.rcp-root {
+  @apply !w-full !bg-primary/5
+}
+
+.rcp-root>label {
+  @apply !hidden
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px !important;
+  /* adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* set to desired background color for the scrollbar holder */
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  /* set to desired gradient for the scrollbar thumb */
+  border-radius: 6px;
+  /* adjust as needed */
+}
+
+.rcp-saturation {
+  @apply !h-36
+}
+
+.loadBox>div>div>div>div {
+  @apply bg-primary/5 border border-input
+}
+
+.loadBox>div>div>div>div:first-child {
+  @apply bg-gradient border border-input
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.fade-out-element {
+  animation: fadeOut 1s ease-out;
+}
+
+@keyframes shadowAnimation {
+
+  0%,
+  100% {
+    @apply h-96 w-96 m-10
+  }
+
+  50% {
+    @apply w-80 h-80 m-0 opacity-10
+  }
+
+  75% {
+    @apply m-20
+  }
+}
+
+.shadowA {
+  background: var(--gradientBase) !important;
+  animation: shadowAnimation 10s infinite;
+}
+
+.shadow-custom:hover {
+  box-shadow: 0 0px 15px 0.5px rgba(255, 255, 255, 0.404);
+}
+
+.skeleton-loader {
+  width: 100%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: shine 1s infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0,
+      /* move highlight to right */
+      0 0;
+  }
+}
+
+.CodeMirror {
+  @apply !h-full
+}
+
+.cm-s-dracula.CodeMirror, .cm-s-dracula .CodeMirror-gutters {
+  background-color: #ffffff00 !important;
+  color: #f8f8f2 !important;
+  border: none;
+  font-size: larger;
+}
+
+
+body {
+  margin: 30px;
+  font-family: sans-serif;
+}
+
+#fontSizeWrapper {
+  font-size: 16px;
+}
+
+#fontSize {
+  width: 100px;
+  font-size: 1em;
+}
+
+/* ————————————————————–
+  Tree core styles
+*/
+.tree {
+  margin: 1em;
+}
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+}
+
+.tree ul li {
+  padding: 1em 0 0 1em;
+}
+
+.tree>li:last-child {
+  padding-bottom: 0;
+}
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+}
+
+label.tree_label {
+  cursor: pointer;
+}
+
+label.tree_label:hover {
+  color: #666;
+}
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+}
+
+:checked~label.tree_label:before {
+  content: '–';
+}
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+}
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+}
+
+label.tree_label:after {
+  border-bottom: 0;
+}
+
+:checked~label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+}
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto;
+}
+
+.tree>li:last-child:before {
+  display: none;
+}
+
+
+
+.pong>div>* {
+  @apply bg-primary opacity-70
+}
+
+
+@import url("tldraw/tldraw.css");
+
+.tl-background {
+  background-color: transparent !important;
+}
+
+.custom-layout {
+  position: absolute;
+  inset: 0px;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.custom-layout-pop {
+  inset: 0px;
+  z-index: 300;
+  pointer-events: none;
+}
+
+.custom-button {
+  pointer-events: all;
+}
+
+.tlui-layout {
+  display: none !important;
+}
+
+[role="menu"] {
+  @apply bg-background border-input border
+}
+
+[data-testid="context-menu.toggle-lock"] {
+  display: none !important;
+}
+
+[data-testid="context-menu-sub-trigger.move-to-page"] {
+  display: none !important;
+}
