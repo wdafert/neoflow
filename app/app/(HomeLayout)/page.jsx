@@ -41,7 +41,7 @@ export default async function WavyBackgroundDemo() {
                 Object.keys(contact).map((link) => (
                   <a
                     href={contact[link].name}
-                    class="flex border-input lg:hover:text-foreground ease-in-out duration-200 lg:hover:bg-muted/40 gap-3 p-4 bg-muted/20 backdrop-blur rounded-lg border w-full text-sm lg:last:items-center lg:last:justify-center text-foreground/70 "
+                    class="flex border-input lg:hover:text-foreground ease-in-out duration-200 lg:hover:bg-muted/40 gap-3 p-4 bg-muted/20 backdrop-blur rounded-lg border w-full text-sm lg:last:items-center lg:last:justify-center text-foreground/70  last:col-span-2"
                   >
                     <img
                       src={`/contact/${contact[link].icon}.svg`}
@@ -63,21 +63,21 @@ export default async function WavyBackgroundDemo() {
 
 
 const contact = {
+  "discord": {
+    "title": "Discord",
+    "name": "https://discord.gg/4BpxBW5g",
+    "icon": "9"
+  },
+  "devto": {
+    "title": "DEV.to",
+    "name": "https://dev.to/kiraaziz",
+    "icon": "7"
+  },
   "email": {
     "title": "Email",
     "name": "mailto:kiraaziz2020@gmail.com",
     "icon": "1"
-  },
-  "phone": {
-    "title": "Phone",
-    "name": "tel:+216 93 989 486",
-    "icon": "2"
-  },
-  "whatsup": {
-    "title": "Whats app",
-    "name": "https://wa.me/27028711",
-    "icon": "3"
-  },
+  }, 
   "github": {
     "title": "Github",
     "name": "https://github.com/kiraaziz",
@@ -98,9 +98,5 @@ const contact = {
     "name": "https://www.linkedin.com/in/med-aziz-rjeibi-3b07832a5/",
     "icon": "6"
   },
-  "devto": {
-    "title": "DEV.to",
-    "name": "https://dev.to/kiraaziz",
-    "icon": "7"
-  }
+
 }

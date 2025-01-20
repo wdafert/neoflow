@@ -3,11 +3,12 @@ import { getServerSession } from 'next-auth'
 import { Theme } from "@/components/providers/Theme"
 import Session from "@/components/providers/Session"
 import { Toaster } from "@/components/ui/sonner"
+import { Analytics } from "@vercel/analytics/react"
 
 export async function metadata() {
   return {
-      title: "Neoflow",
-      icons: [{ rel: 'icon', url: `/svg/logo.svg` }]
+    title: "Neoflow",
+    icons: [{ rel: 'icon', url: `/svg/logo.svg` }]
   };
 }
 
@@ -29,12 +30,13 @@ export default async function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Session session={session}>
-            <Toaster position="top-center"/>
+            <Toaster position="top-center" />
             <div className='w-full h-screen overflow-auto text-foreground'>
               {children}
             </div>
           </Session>
         </Theme>
+        <Analytics />
       </body>
     </html >
   )
