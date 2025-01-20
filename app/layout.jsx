@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 export async function metadata() {
   return {
     title: "Neoflow",
+    description: "Explore NeoFlow, an innovative platform for seamless workflow automation and team collaboration. Boost productivity with advanced tools for task management, integrations, and real-time collaboration. Transform your workflow today!",
     icons: [{ rel: 'icon', url: `/svg/logo.svg` }]
   };
 }

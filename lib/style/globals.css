@@ -6,6 +6,10 @@ body {
   font-family: "Nunito" !important;
 }
 
+*{
+  @apply border-input;
+  scroll-behavior: smooth;
+}
 .bg-gradient {
   background: hsl(var(--primaryBase))
 }
