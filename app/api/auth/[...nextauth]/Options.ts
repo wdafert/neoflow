@@ -15,35 +15,35 @@ export const options: NextAuthOptions = {
             clientId: process.env.GITHUB_ID,
             clientSecret: process.env.GITHUB_SECRET,
         }),
-        CredentialsProvider({
-            name: "Credentials",
-            credentials: {
-                email: { label: "email", type: "email" },
-                name: { label: "name", type: "text" },
-                image: { label: "image", type: "text" },
-            },
+        // CredentialsProvider({
+        //     name: "Credentials",
+        //     credentials: {
+        //         email: { label: "email", type: "email" },
+        //         name: { label: "name", type: "text" },
+        //         image: { label: "image", type: "text" },
+        //     },
 
-            async authorize(credentials) {
-                const user = await prisma.user.findUnique({
-                    where: {
-                        email: credentials.email
-                    }
-                });
-                if (user) {
-                    return user;
-                }
+        //     async authorize(credentials) {
+        //         const user = await prisma.user.findUnique({
+        //             where: {
+        //                 email: credentials.email
+        //             }
+        //         });
+        //         if (user) {
+        //             return user;
+        //         }
 
-                const newUser = await prisma.user.create({
-                    data: {
-                        image: credentials?.image,
-                        email: credentials.email,
-                        name: credentials?.name
-                    }
-                })
+        //         const newUser = await prisma.user.create({
+        //             data: {
+        //                 image: credentials?.image,
+        //                 email: credentials.email,
+        //                 name: credentials?.name
+        //             }
+        //         })
 
-                return newUser
-            }
-        }),
+        //         return newUser
+        //     }
+        // }),
     ],
     callbacks: {
         session: async ({ session, token }: any) => {
