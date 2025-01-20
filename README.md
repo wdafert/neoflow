@@ -1,7 +1,8 @@
 # Neoflow
+![Hero Screenshot](public/landing.webp)
 
 Neoflow is an open-source whiteboard application designed for seamless collaboration and creativity. It combines simplicity with advanced features, making it perfect for teams, designers, and creative minds.
-
+---
 ## Features
 
 - **Free Forever**: No hidden costs. Create and collaborate without limits.
@@ -34,31 +35,7 @@ npm run dev
 # Open the app in your browser
 # Visit http://localhost:3000
 ```
-
-## Screenshots
-
-### Hero Section
-
-![Hero Screenshot](public/landing.webp)
-
-## Navbar
-
-The application features a responsive and accessible navigation bar with the following elements:
-
-- Links to Home, Features, Installation, Community, and FAQ sections.
-- Light and dark mode toggle.
-- Social links (Discord and GitHub).
-
-## Services Section
-
-Neoflow includes the following services:
-
-1. **Free Forever**: No hidden costs.
-2. **Open Source**: Community-driven development.
-3. **Fun & Easy**: User-friendly interface.
-4. **AI Integration**: Smarter workflows.
-5. **tldraw Powered**: Built on a robust engine.
-6. **Real-time Collaboration**: Collaborate with your team instantly.
+ 
 
 ## Quick Start Guide
 
@@ -86,7 +63,7 @@ A: Yes, Neoflow integrates smart AI features to enhance your workflow.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. 
 
 ---
 
