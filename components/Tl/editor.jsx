@@ -73,7 +73,7 @@ export default function Editor({ id, project, readmode }) {
     }, [])
 
     if (typeof window === "undefined") {
-        return  <Loading />
+        return <Loading />
     }
 
 
@@ -128,13 +128,17 @@ const Tools = track(({ handleSave, readmode }) => {
                 </div>
                 <div className={`w-full h-full  flex`}>
                     <div className='w-full h-full flex justify-between flex-col items-start '>
-                        <Link href={"/app"} className=' w-max gap-2 flex g items-center justify-between bg-muted/10 p-2.5  rounded-xl border border-input px-4 -translate-x-12 pointer-events-auto'>
-                            <svg className="" width="20" height="20" viewBox="0 0 55 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect className="stroke-primary/80" x="14.4954" y="0.998303" width="18" height="60" rx="9" transform="rotate(13 14.4954 0.998303)" stroke="black" stroke-width="5" />
-                                <rect className="stroke-primary/80" x="36.4954" y="22.9983" width="18" height="60" rx="9" transform="rotate(13 36.4954 22.9983)" stroke="black" stroke-width="5" />
-                            </svg>
-                            <h1 className='text-sm font-semibold tracking-wider'>Neoflow</h1>
-                        </Link>
+                        <div className="w-full flex items-start justify-between">
+                            <Link href={"/app"} className=' w-max gap-2 flex g items-center justify-between bg-muted/10 p-2.5  rounded-xl border border-input px-4 -translate-x-12 pointer-events-auto'>
+                                <svg className="" width="20" height="20" viewBox="0 0 55 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect className="stroke-primary/80" x="14.4954" y="0.998303" width="18" height="60" rx="9" transform="rotate(13 14.4954 0.998303)" stroke="black" stroke-width="5" />
+                                    <rect className="stroke-primary/80" x="36.4954" y="22.9983" width="18" height="60" rx="9" transform="rotate(13 36.4954 22.9983)" stroke="black" stroke-width="5" />
+                                </svg>
+                                <h1 className='text-sm font-semibold tracking-wider'>Neoflow</h1>
+                            </Link>
+
+                            <img className="h-10 opacity-70" src="https://tldraw.dev/_next/static/media/watermark-desktop-dark.246eb9a3.svg" />
+                        </div>
                         <div className='flex  w-full items-end justify-end h-full py-1'>
                             <div className='flex rounded-md text-foreground w-3/5 items-center justify-center  scale-90  pointer-events-auto '>
                                 {editor.getSelectedShapeIds().length > 0 && <GroupActions readmode={readmode} openCode={openCode} setOpenCode={setOpenCode} showStyle={showStyle} setShowStyle={setShowStyle} editor={editor} />}
