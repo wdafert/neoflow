@@ -46,6 +46,14 @@ export default function Editor({ id, project, readmode }) {
         }
     }
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            handleSave();
+        }, 60000)
+
+        return () => clearInterval(intervalId);
+    }, [])
+
     useLayoutEffect(() => {
         setLoadingState({ status: 'loading' })
 
