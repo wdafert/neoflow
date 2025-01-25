@@ -17,7 +17,7 @@ export const GET = async (request: Request) => {
                 stream: true,
                 n: 1,
                 messages: [
-                    {role: "system", content: "you are a maraid js digram designer"},
+                    {role: "system", content: "you are a mermaid js digram designer"},
                     {
                         role: "user",
                         content: about
